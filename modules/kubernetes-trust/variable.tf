@@ -7,6 +7,6 @@ variable "service-account" {
 
 }
 
-variable "path" {
+variable "eks-cluster-tfstate-path" {
   default = "../../project-a/terraform.tfstate"
 }

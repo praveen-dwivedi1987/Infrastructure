@@ -2,7 +2,7 @@ data "terraform_remote_state" "eks-cluster" {
   backend = "local"
 
   config = {
-    path = var.path
+    path = var.eks-cluster-tfstate-path
   }
 }
 

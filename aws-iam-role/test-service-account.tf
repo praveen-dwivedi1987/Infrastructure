@@ -1,6 +1,6 @@
 module "iam-role-my-sa-test" {
   source = "../modules/kubernetes-trust"
-  path   = "/mnt/c/Users/Praveen_Dwivedi/Desktop/Study/Terraform/Infrastructure/project-a/terraform.tfstate"
+  eks-cluster-tfstate-path   = "/mnt/c/Users/Praveen_Dwivedi/Desktop/Study/Terraform/Infrastructure/project-a/terraform.tfstate"
   service-account =     {
       namespace      = "default"
       serviceaccount = "my-sa-test"
