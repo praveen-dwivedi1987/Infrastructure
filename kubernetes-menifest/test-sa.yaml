@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: test
+  namespace: default
+  annotations: 
+   eks.amazonaws.com/role-arn: arn:aws:iam::315431037525:role/test_role
