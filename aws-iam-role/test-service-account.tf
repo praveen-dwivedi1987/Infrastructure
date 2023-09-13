@@ -1,11 +1,11 @@
 module "iam-role-my-sa-test" {
-  source = "../modules/kubernetes-trust"
-  eks-cluster-tfstate-path   = "/mnt/c/Users/Praveen_Dwivedi/Desktop/Study/Terraform/Infrastructure/project-a/terraform.tfstate"
-  service-account =     {
-      namespace      = "default"
-      serviceaccount = "my-sa-test"
-    }
+  source                   = "../modules/kubernetes-trust"
+  eks-cluster-tfstate-path = "/mnt/c/Users/Praveen_Dwivedi/Desktop/Study/Terraform/Infrastructure/eks-cluster/terraform.tfstate"
+  service-account = {
+    namespace      = "default"
+    serviceaccount = "my-sa-test"
   }
+}
 
 resource "aws_iam_policy" "test-policy" {
   policy = jsonencode({
@@ -26,5 +26,5 @@ resource "aws_iam_role_policy_attachment" "test-attach" {
 }
 
 output "sa-role-arn" {
-    value  = module.iam-role-my-sa-test.sa-role-arn
+  value = module.iam-role-my-sa-test.sa-role-arn
 }
