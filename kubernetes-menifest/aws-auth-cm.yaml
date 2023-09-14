@@ -4,16 +4,18 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::150278519573:role/eksNodeRole
+      rolearn: arn:aws:iam::178436013446:role/eksNodeRole
       username: system:node:{{EC2PrivateDNSName}}
     - groups:
       - system:masters
-      rolearn: arn:aws:iam::150278519573:role/eks-admin-role
+      rolearn: arn:aws:iam::178436013446:role/eks-admin-role
       username: eks-admin-1
+    - groups:
+      - power-user
+      rolearn: arn:aws:iam::178436013446:role/aws-power-user-group-role
+      username: power-user-1
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-09-13T04:46:56Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "729"
-  uid: f50b716b-bde4-435a-9c6b-fd9eef74cc93
+  
