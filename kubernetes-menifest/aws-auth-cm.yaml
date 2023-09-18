@@ -4,15 +4,15 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::178436013446:role/eksNodeRole
+      rolearn: arn:aws:iam::588273412047:role/eksNodeRole
       username: system:node:{{EC2PrivateDNSName}}
     - groups:
       - system:masters
-      rolearn: arn:aws:iam::178436013446:role/eks-admin-role
+      rolearn: arn:aws:iam::588273412047:role/eks-admin-role
       username: eks-admin-1
     - groups:
       - power-user
-      rolearn: arn:aws:iam::178436013446:role/aws-power-user-group-role
+      rolearn: arn:aws:iam::588273412047:role/aws-power-user-group-role
       username: power-user-1
 kind: ConfigMap
 metadata:
